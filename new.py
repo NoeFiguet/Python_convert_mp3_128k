@@ -1,14 +1,14 @@
-### C:\Python27\python.exe $(FULL_CURRENT_PATH)
-### C:\Python27\python -m pip install pydub
-import sys, time, os
+#Define the function
 
-# try:
- # time.sleep(1)
- # python -m pip install ffmpy
-
-# except Exception as ex:
-    # print ex
-
+#########################################
+#
+#  Function name : remove
+#  
+#  Description : 
+#
+#  Parameters :
+#
+#########################################
 def remove(path):
     """ param <path> could either be relative or absolute. """
     if os.path.isfile(path):
@@ -19,12 +19,30 @@ def remove(path):
         print "file {} is not a file or dir.".format(path)
 
 
+#########################################
+#
+#  Function name : print_and_wait
+#  
+#  Description : 
+#
+#  Parameters :
+#
+#########################################
 def print_and_wait(text, wait):	
 	import time
 	print text
 	time.sleep(wait)
 
 
+#########################################
+#
+#  Function name : convert_mp3
+#  
+#  Description : 
+#
+#  Parameters :
+#
+#########################################
 def convert_mp3(input_file, baudrate):
 	print("Start convert_mp3")	
 	import os
@@ -38,7 +56,17 @@ def convert_mp3(input_file, baudrate):
 	from pydub import AudioSegment
 	sound = AudioSegment.from_mp3(input_file)
 	sound.export(output_folder + ".mp3" , format="mp3", bitrate=baudrate)
-	
+
+
+#########################################
+#
+#  Function name : convert_mp3
+#  
+#  Description : 
+#
+#  Parameters :
+#
+#########################################
 def show_files_folder(path, extension):
 	print("Start show_files_folder")	
 	import os
@@ -47,7 +75,10 @@ def show_files_folder(path, extension):
 			print(file)
 			convert_mp3(path + '/' + file, "128k")
 			print("Start Show Files")	
-		
+
+
+
+# Entry point of the file		
 try:
 	#!/usr/share/python
 	import sys, time, os
