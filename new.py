@@ -80,7 +80,6 @@ def show_files_folder(path, extension):
 
 # Entry point of the file		
 try:
-	#!/usr/share/python
 	import sys, time, os
 	file_location = os.getcwd()
 	print_and_wait("Start", 0.1)
